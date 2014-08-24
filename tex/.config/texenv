@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+# Environment variables for TeX Live
+export TEXLIVE="/usr/local/texlive"
+export TEXDIR="${TEXLIVE}/2014"
+export TEXMFLOCAL="${TEXLIVE}/texmf-local"
+export TEXMFDIST="${TEXDIR}/texmf-dist"
+export TEXMFDOC="${TEXMFDIST}/doc"
+export TEXMFSYSVAR="${TEXDIR}/texmf-var"
+export TEXMFSYSCONFIG="${TEXDIR}/texmf-config"
+export TEXMFVAR="${HOME}/.texlive2014/texmf-var"
+export TEXMFCONFIG="${HOME}/.texlive2014/texmf-config"
+export TEXMFHOME="${HOME}/texmf"
+
+# Update PATH
+export TEXPATH="${TEXDIR}/bin/x86_64-linux"
+export PATH="${TEXPATH}:${PATH}"
+
+# Add to MANPATH
+export TEXMANPATH="${TEXMFDOC}/man"
+export MANPATH=`manpath` # get current MANPATH
+export MANPATH="${TEXMANPATH}:${MANPATH}"
